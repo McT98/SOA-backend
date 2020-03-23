@@ -2,7 +2,6 @@
 #coding:utf-8
 import os
 import json
-import Levenshtein
 from selenium import webdriver
 from time import sleep
 import random
