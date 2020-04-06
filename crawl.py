@@ -24,7 +24,16 @@ if __name__ == '__main__':
     #xpath = "//*[class=\"commit-group Box Box--condensed\"]/li[1]/div[2]/a"
     #xpath = "//*[@class=\"d-none d-md-block flex-shrink-0\"]/a"
     urls = []
+    month = 'Mar'
+    date = 22
     while True:
+        title = driver.find_elements_by_class_name('commit-group-title')
+        time = title[0].text
+        print(time)
+        if time.find(month) >= 0:
+            date_ = time[time.find(month)+len(month)+1:time.find(',')]
+            if int(date_) <= date:
+                break
         items = driver.find_elements_by_css_selector("[class='d-none d-md-block flex-shrink-0']")
         for item in items:
             urls.append(item.find_element_by_tag_name('a').get_attribute('href').replace('commit', 'tree'))

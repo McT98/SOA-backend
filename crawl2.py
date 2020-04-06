@@ -23,7 +23,7 @@ if __name__ == '__main__':
     with open('./urls.json', 'r') as f:
         urls = json.load(f)
     print(len(urls))
-    for i in range(100, len(urls), 7):
+    for i in range(0, len(urls), 7):
         #url = "https://github.com/BlankerL/DXY-COVID-19-Data/blob/9a76e244d203d3ec63b93bf3af6c7163ca7df5ed/json/DXYArea.json"
         url = urls[i]
         if url.index(default) < 0 or len(url) <= len(default):
