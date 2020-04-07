@@ -24,8 +24,8 @@ if __name__ == '__main__':
     #xpath = "//*[class=\"commit-group Box Box--condensed\"]/li[1]/div[2]/a"
     #xpath = "//*[@class=\"d-none d-md-block flex-shrink-0\"]/a"
     urls = []
-    month = 'Mar'
-    date = 22
+    month = 'Apr'
+    date = 6
     while True:
         title = driver.find_elements_by_class_name('commit-group-title')
         time = title[0].text
